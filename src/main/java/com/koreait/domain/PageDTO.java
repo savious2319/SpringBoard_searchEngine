@@ -15,7 +15,7 @@ public class PageDTO {
 	public PageDTO(Criteria cri, int total) {
 		this.cri = cri;
 		this.total = total;
-		
+										//Math.ceil : 반올림
 		this.endPage = (int)(Math.ceil(cri.getPageNum() / 10.0)) * 10; //밑에 있는 번호 [1] [2] [3] 
 		this.startPage = this.endPage - 9;
 		
